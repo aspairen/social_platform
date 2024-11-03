@@ -31,7 +31,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 // Connect to MongoDB database
-mongoose.connect('mongodb+srv://cm4125721:21savage@cluster0.gwltw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
+mongoose.connect(process.env.MONGODB_URI);
 
 
 // Define the Post schema for storing post data
